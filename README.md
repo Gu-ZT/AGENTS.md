@@ -8,7 +8,7 @@
 
 ## 简介
 
-这里维护了一份通用的 `AGENTS.md`，用来约束 AI 编程助手的日常行为。从怎么写代码、怎么跑测试到怎么写 Commit 都有规定，主要覆盖通用场景以及前端、Java、Gradle 项目。
+这里维护了一份通用的 `AGENTS.md`，用来约束 AI 编程助手的日常行为。规范采用渐进式披露：入口文件只保留每次任务都适用的强制约束和索引，具体细则按主题放在 `docs/rules/`，AI 按当前任务读取对应文档。
 
 ## 管了哪些事
 
@@ -20,7 +20,18 @@
 - **特定技术栈**：前端、Java 和 Gradle 的专门避坑指南。
 - **怎么交代码**：遵循 Conventional Commits，按步骤提交，别夹带无关改动。
 
-完整内容见 [AGENTS.md](AGENTS.md)。
+规则入口见 [AGENTS.md](AGENTS.md)，按主题拆分后的细则见下方文档结构。
+
+## 文档结构
+
+- [AGENTS.md](AGENTS.md)：规范入口，包含适用范围、每次任务强制约束与专题索引。
+- [language-and-style.md](docs/rules/language-and-style.md)：回复、文档、注释与提交信息的文风要求。
+- [workflow.md](docs/rules/workflow.md)：需求澄清、完整交付、最小变更、错误处理与测试验证。
+- [coding-and-design.md](docs/rules/coding-and-design.md)：命名、抽象、模块划分、注释与代码格式。
+- [exploration-and-review.md](docs/rules/exploration-and-review.md)：检索工具、探索范围与子代理审查。
+- [frontend.md](docs/rules/frontend.md)：`web/` 前端的包管理、主题颜色、滚动区域与弹出层。
+- [java-and-gradle.md](docs/rules/java-and-gradle.md)：Java 代码风格、空安全注解与 Gradle 验证。
+- [version-control.md](docs/rules/version-control.md)：提交粒度、提交信息、暂存检查与推送规则。
 
 ## 用法
 
@@ -30,7 +41,7 @@
 
 ## 维护说明
 
-更新条款时别写废话，直接写清楚“要做什么”、“别做什么”以及“为什么（技术后果）”，保持例子和规则一致。Commit 格式用 `type(scope): 简短中文摘要`，提交前检查下 diff 和多余空格。
+更新条款时别写废话，直接写清楚“要做什么”、“别做什么”以及“为什么（技术后果）”，保持例子和规则一致。规则按主题写入对应专题文档，入口文件只保留全局约束和索引。Commit 格式用 `type(scope): 简短中文摘要`，提交前检查下 diff 和多余空格。
 
 ## 许可证
 
