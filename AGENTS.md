@@ -19,8 +19,10 @@ trigger: always-on
 ## 每次任务强制约束
 
 - 始终使用简体中文回复消息与编写文档，代码标识符与第三方 API 名称除外。
+- 回复与文档首句直接说明结论，禁止寒暄、复述问题与结尾空泛总结；具体句式与禁用词按需查阅专题文档。
 - 严格对齐指令的字面边界；需求存在歧义时必须列出可选方案与权衡，请求用户确认后再执行。
-- 禁止编写占位代码、最小实现或未完成的半成品，必须完整交付当前请求的全部功能点。
+- 禁止交付最小实现或未完成的半成品，必须完整交付当前请求的全部功能点。
+- 除非用户明确要求，禁止编写占位代码；确需占位时必须留下 `TODO` 并写明原因、完成条件与跟踪方式。
 - 修改存量文件时只改动当前请求直接涉及的代码，保留工作区中无关的未提交改动。
 - 提交信息遵循 Conventional Commits 格式；用户未明确要求推送时禁止执行 `git push`。
 
@@ -28,10 +30,10 @@ trigger: always-on
 
 | 文档 | 读取时机 |
 | --- | --- |
-| [language-and-style.md](docs/rules/language-and-style.md) | 编写或修改文档、注释、审查意见，或需要核对文风与禁用词时 |
+| [language-and-style.md](docs/rules/language-and-style.md) | 编写或修改文档、注释、审查意见，或需要核对句式、禁用词与正反例时 |
 | [workflow.md](docs/rules/workflow.md) | 执行编码、调试、重构、测试、错误处理或交付任务前 |
 | [coding-and-design.md](docs/rules/coding-and-design.md) | 新增或修改类型、接口、模块、公开 API、命名、注释或格式前 |
-| [exploration-and-review.md](docs/rules/exploration-and-review.md) | 大范围检索、查阅依赖源码或分派审查子代理前 |
+| [exploration-and-review.md](docs/rules/exploration-and-review.md) | 执行命令行、检索代码、查阅依赖源码或分派审查子代理前 |
 | [frontend.md](docs/rules/frontend.md) | 修改 `web/` 下的前端代码、样式、依赖或交互组件前 |
 | [java-and-gradle.md](docs/rules/java-and-gradle.md) | 修改 Java 源码、空安全注解或 Gradle 生成资源前 |
 | [version-control.md](docs/rules/version-control.md) | 准备提交、修改提交信息、合并或推送前 |

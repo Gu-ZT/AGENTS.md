@@ -34,7 +34,7 @@
 
 ## 代码格式与风格细节
 
-以项目根目录的代码风格配置（如 `style.xml`、`.editorconfig`、`.eslintrc` 等）为唯一标准；遇到 Checkstyle 或 Linter 报错时必须直接修复代码，禁止添加抑制注解或注释（如 `@SuppressWarnings`）强行绕过检查。
+以项目根目录对应语言的代码风格配置（如 `.editorconfig`、`.eslintrc` 等）为唯一标准；Java 项目以 [java-and-gradle.md](java-and-gradle.md) 中的 `style.xml` 要求为准。遇到 Checkstyle 或 Linter 报错时必须直接修复代码，禁止添加抑制注解或注释（如 `@SuppressWarnings`）强行绕过检查。
 
 无论 `if`、`else`、`for`、`while` 代码块只有单行还是多行，必须始终加上大括号 `{}`。
 
